@@ -1,6 +1,6 @@
 import requests
 import re
-from venv.links.all_links import links
+from links.all_links import links
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
@@ -50,4 +50,4 @@ for link in tqdm(links):
 
         count += 1
     else:
-        print('Ошибка при получении страницы:', response.status_code)
+        print('Page load error:', response.status_code)

@@ -6,4 +6,4 @@ response = requests.get(url)
 if response.status_code == 200:
     print(response.text)
 else:
-    print('Ошибка при получении страницы:', response.status_code)
+    print('Page load error:', response.status_code)
