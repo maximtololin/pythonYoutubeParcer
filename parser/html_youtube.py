@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://www.youtube.com/watch?v=zu2ZCQ6VQIY'
+url = 'YOUR_LINK'
 response = requests.get(url)
 
 if response.status_code == 200:

@@ -23,12 +23,14 @@ for link in tqdm(links):
         with open('response.html', 'r') as f:
             content = f.read()
 
+        # Matching css-selectors
         match_title_eng = soup.find("meta", itemprop="name")["content"]
 
         match_desc_eng = soup.find('meta', {'name': 'description'})['content']
 
         match_date = soup.find('meta', {'itemprop': 'datePublished'})['content']
 
+        # Matching regulars
         match_title = re.search(r'playerOverlayVideoDetailsRenderer":{"title":{"simpleText":".*?"},', content,
                                 re.DOTALL)
         if match_title:
